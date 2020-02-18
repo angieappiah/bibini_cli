@@ -13,6 +13,7 @@ class CLI
     @site = ['cape_coast_castle', 'shai_hill', 'boti_falls']
     puts <<-DOC.gsub/^\s*/,''
     DOC
+    @sites = popular_sites::site
   end
 
   def select_site

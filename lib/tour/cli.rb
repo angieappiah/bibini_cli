@@ -22,14 +22,22 @@ class CLI
     input = nil
     while input != "exit"
       puts "Enter the site you want to visit or type exit"
-
+      input = get.strip
+      case input
+      when "1"
+        puts "Welcome to the cape coast castle"
+      when "2"
+        puts "Welcome to shai hill"
+      when "3"
+        puts "Welcome to botifalls"
+      when "popular"
+        popular_sites
+      else
+        puts "No Selection entered"
     end
-  end
-    puts "Ready to visit "{}"
   end
 
   def  goodbye
     puts "Thank You Enjoy Your Stay In Ghana"
   end
-
 end

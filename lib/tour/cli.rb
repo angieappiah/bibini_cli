@@ -5,7 +5,7 @@ class CLI
     select_sites
     options
     goodbye
-    
+
     puts "Welcome to Gh Tour"
   end
 
@@ -13,10 +13,18 @@ class CLI
     @site = ['cape_coast_castle', 'shai_hill', 'boti_falls']
   end
 
-  def select_user_site
+  def select_site
     @site.each do
       "site"
+  end
+
+  def options
+    input = nil
+    while input != "exit"
+      puts "Enter the site you want to visit or type exit"
+
     end
+  end
     puts "Ready to visit "{}"
   end
 

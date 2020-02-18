@@ -1,4 +1,5 @@
 class popular_sites
+  attr_accessor :name :availability :url
 
   def self.sites
     <<-DOC.gsub/^\s*/,''
@@ -17,5 +18,7 @@ class popular_sites
     site_3.name = "Boti falls"
     site_3.availability = true
     site_3 url = "https://www.easytrackghana.com/tour-ghana_day-trips-accra.ph"
-      end
+
+    [site_1, site_2, site_3]
+  end
 end

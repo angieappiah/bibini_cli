@@ -2,9 +2,10 @@ class CLI
 
   def intro
     popular_sites
-    #select_sites
-    #options
+    select_sites
+    options
     goodbye
+    
     puts "Welcome to Gh Tour"
   end
 
@@ -16,7 +17,7 @@ class CLI
     @site.each do
       "site"
     end
-    puts "Ready to visit "#{site}"
+    puts "Ready to visit "{}"
   end
 
   def  goodbye

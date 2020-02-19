@@ -1,3 +1,5 @@
+require "bibini_cli/version"
+
 class CLI
 
   def intro

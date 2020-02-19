@@ -27,7 +27,8 @@ class CLI
       input = get.strip
 
       if input.to_i > 0
-        puts @sites[input.to_i-1]
+        the_sites = @sites[input.to_i-1]
+        puts  "#{i}. {sites.name} - {sites.availability}"
       elseif input == "popular_sites"
        popular_sites
       else

@@ -10,10 +10,10 @@ class CLI
   end
 
   def popular_sites
-    @site = ['cape_coast_castle', 'shai_hill', 'boti_falls']
-    puts <<-DOC.gsub/^\s*/,''
-    DOC
-    @sites = popular_sites::site
+    @sites = popular_sites::sites
+  @deals.each_with_index(1) do |sites, i|
+    puts "#{i}. {sites.name} - {sites.availability}"
+
   end
 
   def select_site

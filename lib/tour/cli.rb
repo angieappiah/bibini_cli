@@ -13,7 +13,6 @@ class CLI
     @sites = popular_sites::sites
   @deals.each_with_index(1) do |sites, i|
     puts "#{i}. {sites.name} - {sites.availability}"
-
   end
 
   def select_site
@@ -26,15 +25,11 @@ class CLI
     while input != "exit"
       puts "Enter the site you want to visit or type exit"
       input = get.strip
-      case input
-      when "1"
-        puts "Welcome to the cape coast castle"
-      when "2"
-        puts "Welcome to shai hill"
-      when "3"
-        puts "Welcome to botifalls"
-      when "popular"
-        popular_sites
+
+      if input.to_i > 0
+        puts @sites[input.to_i-1]
+      elseif input == "popular_sites"
+       popular_sites
       else
         puts "No Selection entered"
     end

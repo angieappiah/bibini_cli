@@ -1,3 +1,5 @@
+require_relative "./scraper.rb"
+
 class popular_sites
   attr_accessor :name :availability :url
 

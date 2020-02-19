@@ -1,7 +1,12 @@
               GH_ TOUR
 
 
-This project is built to help people navigate through the tourist sites in Ghana (Gh)
+  This project is built to help people navigate through the tourist sites in Ghana (Gh).
+The country recently unveiled a 15-year-long-tourism plan that seeks to increase the annual number of tourists to Ghana from one million to eight million per year. This project is aimed at showing and directing tourist to the numerous sites available.
+
+     THE INSTALLATION PROCESS
+
+     THE USAGE  INSTRUCTIONS
 
 
 # BibiniCli

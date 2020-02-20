@@ -8,3 +8,5 @@ require_relative './bibini_cli/site'
 
 require_relative '../lib/bibini_cli/version'
 require 'colorize'
+require_relative '../lib/bibini_cli'
+require "bibini_cli/version"

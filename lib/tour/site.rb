@@ -1,6 +1,6 @@
 require_relative "./scraper.rb"
 
-class popular_sites
+class Tour::Popular_sites
   attr_accessor :name :availability :url
 
   def self.sites

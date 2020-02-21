@@ -1,4 +1,4 @@
-require_relative '../lib/bibini_cli'
+#require_relative '../lib/bibini_cli'
 
 class CLI
 
@@ -12,14 +12,16 @@ class CLI
   end
 
   def popular_sites
-    @sites = popular_sites::sites
+    @sites = Popular_sites.sites
   @deals.each_with_index(1) do |sites, i|
     puts "#{i}. {sites.name} - {sites.availability}"
+  end
   end
 
   def select_site
     @site.each do
       "site"
+    end
   end
 
   def options
@@ -35,6 +37,7 @@ class CLI
        popular_sites
       else
         puts "No Selection entered"
+      end
     end
   end
 

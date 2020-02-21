@@ -1,6 +1,6 @@
 require_relative "./scraper.rb"
 
-class Tour::Popular_sites
+class Popular_sites
   attr_accessor :name :availability :url
 
   def self.sites
@@ -13,6 +13,7 @@ class Tour::Popular_sites
   end
 
   def self.scrape_easy_track_ghana
+    binding.pry
     doc = Nokogiri::HTML(open("https://www.easytrackghana.com/tour-ghana_day-trips-accra.ph")
     site = self.new
     site.name = doc.css("h3").text

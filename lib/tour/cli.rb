@@ -1,7 +1,7 @@
 require_relative '../lib/bibini_cli'
 
-class Tour::CLI
-  
+class CLI
+
   def intro
     popular_sites
     select_sites

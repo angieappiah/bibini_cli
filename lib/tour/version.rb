@@ -1,3 +1,3 @@
-module BibiniCli
-  VERSION = "0.1.0"
-end
+#module BibiniCli
+#  VERSION = "0.1.0"
+#end

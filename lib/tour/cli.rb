@@ -3,7 +3,8 @@
 class CLI
 
   def intro
-    popular_sites
+    puts "hello"
+    Popular_sites
     select_sites
     options
     goodbye
@@ -11,14 +12,14 @@ class CLI
     puts "Welcome to Gh Tour"
   end
 
-  def popular_sites
+  def Popular_sites
     @sites = Popular_sites.sites
   @deals.each_with_index(1) do |sites, i|
     puts "#{i}. {sites.name} - {sites.availability}"
   end
   end
 
-  def select_site
+  def select_sites
     @site.each do
       "site"
     end

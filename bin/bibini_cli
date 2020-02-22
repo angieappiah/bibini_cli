@@ -3,7 +3,7 @@
 require_relative '../lib/bibini_cli'
 require "bundler/setup"
 #require "bibini_cli"
-
-#CLI.new.intro
+puts "hello cli"
+CLI.new.intro
 #CLI.new.intro
 #require "bibini_cli/version"

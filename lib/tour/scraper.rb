@@ -1,6 +1,6 @@
 class Scraper
   def scrape
-    doc = Nokogiri::HTML(open("https://www.easytrackghana.com/tour-ghana_day-trips-accra.ph"))
-    puts doc.css("h3")
+    doc = Nokogiri::HTML(open("/https://www.getyourguide.com/accra-l506/half-day-old-and-new-accra-urban-experience-walking-tour-t15359"))
+    puts doc.css("h1").text
   end
 end

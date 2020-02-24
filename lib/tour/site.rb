@@ -9,14 +9,14 @@ class Popular_sites
 
   def self.scrape_sites
     sites = []
-  sites << self.scrape_easy_track_ghana
+  sites << self.scrape_get_your_guide
   end
 
-  def self.scrape_easy_track_ghana
-    doc = Nokogiri::HTML(open("https://www.easytrackghana.com/tour-ghana_day-trips-accra.php"))
+  def self.scrape_get_your_guide
+    doc = Nokogiri::HTML(open("/https://www.getyourguide.com/accra-l506/half-day-old-and-new-accra-urban-experience-walking-tour-t15359"))
     site = self.new
     site.name = doc.css("h3").text
     site.availability = true
-    site.url = doc.search ("https://www.easytrackghana.com/tour-ghana_day-trips-accra.php")
+    site.url = doc.search ("/https://www.getyourguide.com/accra-l506/half-day-old-and-new-accra-urban-experience-walking-tour-t15359")
   end
 end

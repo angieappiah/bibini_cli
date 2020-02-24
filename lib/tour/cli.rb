@@ -1,19 +1,26 @@
 #require_relative '../lib/bibini_cli'
+require 'colorize'
+require_relative "./scraper.rb"
 
 class CLI
 
   def intro
-    puts "hello"
-    puts "Welcome to Gh Tour"
+    puts "hello!"
+    puts ""
+    puts "   //                     \\\\".red.bold
+    puts "  ////                   \\\\\\\\".red.bold
+    puts " /// Welcome to Gh Tour!!  \\\\\\".red.bold
+    puts "////                       \\\\\\\\".red.bold
+    puts ""
+    #puts "Welcome to "
     Popular_sites
-    #select_sites
     options
     goodbye
   end
 
   def Popular_sites
     @sites = Popular_sites.sites
-  @deals.each_with_index(1) do |sites, i|
+  @sites.each_with_index(1) do |sites, i|
     puts "#{i}. {sites.name} - {sites.availability}"
   end
   end
@@ -29,9 +36,12 @@ class CLI
     while input != "exit"
       puts "Enter the sites you want to visit or type exit"
       input = gets.strip
-
       if input.to_i > 0
-        the_sites = @sites[input.to_i-1]
+        puts ""
+     puts "///////////////////////////////////////////////////////////////////////////"
+     puts ""
+    # puts "#{concert_choice.name}".bold
+        sites = Sites.find_by_index(input.to_i - 1)
         puts  "#{i}. {sites.name} - {sites.availability}"
       elseif input == "popular_sites"
        popular_sites

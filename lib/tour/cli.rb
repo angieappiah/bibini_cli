@@ -1,8 +1,9 @@
 #require_relative '../lib/bibini_cli'
 require 'colorize'
 require_relative "./scraper.rb"
+require_relative "./site.rb"
 
-class CLI
+class Cli
 
   def intro
     puts "hello!"
@@ -13,8 +14,9 @@ class CLI
     puts "////                       \\\\\\\\".red.bold
     puts ""
     #puts "Welcome to "
+    
     Popular_sites
-    options
+    select_sites
     goodbye
   end
 
@@ -25,18 +27,14 @@ class CLI
   end
   end
 
-  #def select_sites
-  #  @site.each do
-  #    "site"
-  #  end
-  #end
-
-  def options
+  def select_sites
+    sites = []
     input = nil
     while input != "exit"
       puts "Enter the sites you want to visit or type exit"
       input = gets.strip
       if input.to_i > 0
+          puts  "#{sites}. {sites.name} - {sites.availability}"
         puts ""
      puts "///////////////////////////////////////////////////////////////////////////"
      puts ""

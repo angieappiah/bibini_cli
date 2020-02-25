@@ -1,7 +1,26 @@
 require_relative "./scraper.rb"
+require_relative "./cli.rb"
 
 class Popular_sites
   attr_accessor :name, :availability, :url
+
+  @@all = []
+
+ def initialize (name, availability, url)
+   @name = name
+   @availability = availability
+   @url = url
+   @@all << self
+ end
+
+ def self.all
+   @@all
+ end
+
+ def self.find_by_index(index)
+   @@all[index]
+ end
+
 
   def self.sites
   self.scrape_sites

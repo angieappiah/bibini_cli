@@ -4,6 +4,6 @@ require_relative '../lib/bibini_cli'
 require "bundler/setup"
 #require "bibini_cli"
 #puts "hello cli"
-CLI.new.intro
+Cli.new.intro
 #CLI.new.intro
-#require "bibini_cli/version"
+#require "environment"

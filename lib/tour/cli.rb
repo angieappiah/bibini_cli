@@ -38,11 +38,11 @@ end
     sites = []
     input = nil
     while input != "exit"
-      puts "Here is a list of popular sites..."
-      puts " 1. Cape Coast Castle"
-      puts " 2. Shai Hills"
-      puts " 3. Boti falls"
-      puts "Enter 1,2 or 3 for any of the popular sites listed above or type exit".red
+      puts "Here is a list of some popular sites..."
+      puts "Cape Coast Castle"
+      puts "Shai Hills"
+      puts "Boti falls"
+      puts "Enter the popular sites you want to visit or type exit".red
       input = gets.strip
       if input.to_i > 0
           puts  "#{sites}. {sites.name} - {sites.availability}"

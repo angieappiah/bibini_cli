@@ -15,11 +15,15 @@ class Cli
     puts ""
     puts " Popular sites Information retrieving ......... ".red
 
-    Popular_sites
     sites
+    Popular_sites
     select_sites
     goodbye
   end
+
+def sites
+
+end
 
 
   def Popular_sites
@@ -29,9 +33,6 @@ class Cli
   end
   end
 
- def sites
-   @sites = select_sites.sites
- end
 
   def select_sites
     sites = []
@@ -48,8 +49,7 @@ class Cli
         puts ""
      puts "///////////////////////////////////////////////////////////////////////////".red
      puts ""
-    # puts "#{concert_choice.name}".bold
-        sites = Sites.find_by_index(input.to_i - 1)
+        sites = sites.find_by_index(input.to_i - 1)
         puts  "#{i}. {sites.name} - {sites.availability}"
       elseif input == "popular_sites"
        popular_sites

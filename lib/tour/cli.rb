@@ -8,13 +8,13 @@ class Cli
   def intro
     puts "hello!"
     puts ""
-    puts "   //                     \\\\".red.bold
-    puts "  ////                   \\\\\\\\".red.bold
-    puts " /// Welcome to Gh Tour!!  \\\\\\".red.bold
-    puts "////                       \\\\\\\\".red.bold
+    puts "   |||||||||||||||||||||||||||||||".red.bold
+    puts "   |                             |".red.bold
+    puts "   |     Welcome to Gh Tour!!    |".red.bold
+    puts "   |||||||||||||||||||||||||||||||".red.bold
     puts ""
-    #puts "Welcome to "
-    
+    puts " Popular sites Information retrieving ......... ".red
+
     Popular_sites
     select_sites
     goodbye

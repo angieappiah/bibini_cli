@@ -13,10 +13,10 @@ class Cli
     puts "   |     Welcome to Gh Tour!!    |".red.bold
     puts "   |||||||||||||||||||||||||||||||".red.bold
     puts ""
-    puts " Popular sites Information retrieving ......... ".red
+    puts " popular sites Information retrieving ......... ".red
 
     sites
-    Popular_sites
+    popular_sites
     select_sites
     goodbye
   end
@@ -26,8 +26,8 @@ def sites
 end
 
 
-  def Popular_sites
-    @sites = Popular_sites.sites
+  def popular_sites
+    @sites = Popular_sites.scrape_sites
   @sites.each_with_index(1) do |sites, i|
     puts "#{i}. {sites.name} - {sites.availability}"
   end

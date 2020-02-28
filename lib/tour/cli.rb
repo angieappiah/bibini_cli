@@ -16,7 +16,7 @@ class Cli
     puts " popular sites Information retrieving ......... ".red
 
     sites
-    popular_sites
+    Popular_sites
     select_sites
     goodbye
   end
@@ -26,7 +26,7 @@ def sites
 end
 
 
-  def popular_sites
+  def Popular_sites
     @sites = Popular_sites.scrape_sites
   @sites.each_with_index(1) do |sites, i|
     puts "#{i}. {sites.name} - {sites.availability}"
@@ -49,8 +49,8 @@ end
         puts ""
      puts "///////////////////////////////////////////////////////////////////////////".red
      puts ""
-        sites = sites.find_by_index(input.to_i - 1)
-        puts  "#{i}. {sites.name} - {sites.availability}"
+        @sites.find_index("sites")
+        puts  "#{s}. {sites.name} - {sites.availability}"
       elseif input == "popular_sites"
        popular_sites
       else

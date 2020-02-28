@@ -6,14 +6,14 @@ require_relative "./site.rb"
 class Cli
 
   def intro
-    puts "hello!"
+    puts "Hello!".red
     puts ""
     puts "   |||||||||||||||||||||||||||||||".red.bold
     puts "   |                             |".red.bold
     puts "   |     Welcome to Gh Tour!!    |".red.bold
     puts "   |||||||||||||||||||||||||||||||".red.bold
     puts ""
-    #puts " popular sites Information retrieving ......... ".red
+    puts " Enter p for popular sites ".red
 
     Scraper.scrape
     Popular_sites
@@ -41,7 +41,6 @@ class Cli
      puts ""
 
       elsif input == "p"
-      puts "PPOPULAR SITES".bold
       puts "Here is a list of some popular sites..."
       puts "Cape Coast Castle"
       puts "Shai Hills"

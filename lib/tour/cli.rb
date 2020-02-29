@@ -35,7 +35,7 @@ class Cli
 
       input = gets.strip
       if input.to_i > 0
-          puts  "#{Scraper.scrape}"
+          puts  "#{sites.activity-card}"
         puts ""
      puts "///////////////////////////////////////////////////////////////////////////".red
      puts ""

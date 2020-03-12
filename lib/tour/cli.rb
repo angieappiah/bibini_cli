@@ -35,16 +35,16 @@ class Cli
 
       input = gets.strip
       if input.to_i > 0
-          puts  "#{sites.activity-card}"
+          puts "#{"self.scrape_get_your_guide"}"
         puts ""
      puts "///////////////////////////////////////////////////////////////////////////".red
      puts ""
 
       elsif input == "p"
       puts "Here is a list of some popular sites..."
-      puts "Cape Coast Castle"
-      puts "Shai Hills"
-      puts "Boti falls"
+      puts "1. Cape Coast Castle"
+      puts "2. Shai Hills"
+      puts "3. Boti falls"
       puts "Enter the popular sites you want to visit or type exit".red
       else
         puts "No Selection entered"

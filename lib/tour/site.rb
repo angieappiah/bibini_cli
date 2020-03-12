@@ -41,4 +41,5 @@ class Popular_sites
     url = doc.css ("https://www.getyourguide.com/accra-l506/half-day-old-and-new-accra-urban-experience-walking-tour-t15359")
     site = self.new(name, availability,url)
   end
+
 end

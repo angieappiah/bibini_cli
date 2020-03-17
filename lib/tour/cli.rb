@@ -34,8 +34,9 @@ class Cli
     while input != "exit"
      input = gets.strip
       if input.to_i > 0
-      puts  page = Nokogiri::HTML(open("https://www.easytrackghana.com/day_trip-Cape_Coast.php"))
-
+     page = Nokogiri::HTML(open("https://www.getyourguide.com/accra-l506/accra-architectural-discovery-walking-tour-t15356/"))
+     puts "#{page.name}"
+     puts "#{page.url}"
      puts "///////////////////////////////////////////////////////////////////////////".red
      puts ""
 

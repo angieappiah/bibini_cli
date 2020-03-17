@@ -12,7 +12,7 @@ class Scraper
      sites.css(".activity-card-title").css
   end
 
-  def get_url
+  def url
      sites.css(".activity-card-link").css
   end
 

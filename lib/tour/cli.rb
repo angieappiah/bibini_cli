@@ -15,9 +15,9 @@ class Cli
     puts ""
     puts " Enter p for popular sites ".red
 
-    Scraper.scrape
+    Scraper
     Popular_sites
-    sites
+    options
     goodbye
   end
 
@@ -29,14 +29,13 @@ class Cli
   end
 
 
-  def sites
+  def options
     input = nil
     while input != "exit"
-
-      input = gets.strip
+     input = gets.strip
       if input.to_i > 0
-          puts "#{"self.scrape_get_your_guide"}"
-        puts ""
+      puts  page = Nokogiri::HTML(open("https://www.easytrackghana.com/day_trip-Cape_Coast.php"))
+
      puts "///////////////////////////////////////////////////////////////////////////".red
      puts ""
 

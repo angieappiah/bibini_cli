@@ -1,6 +1,7 @@
 require 'nokogiri'
 require 'open-uri'
 require 'pry'
+#require 'HTTParty'
 
 require_relative './bibini_cli/cli'
 require_relative './bibini_cli/scraper'

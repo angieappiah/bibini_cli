@@ -1,10 +1,23 @@
+
 class Scraper
-  def self.scrape
-    doc = Nokogiri::HTML(open("https://www.getyourguide.com/accra-l506/half-day-old-and-new-accra-urban-experience-walking-tour-t15359"))
-    scrape = doc.css(".activity-card")
-    scrape.each do |card|
-    name = scrape.css(".activity-card-title")
-    url = scrape.css(".activity-card-link")
-    end
+
+  attr_accessor :parse_page
+
+  def initialize
+  page = Nokogiri::HTML(open("https://www.getyourguide.com/accra-l506/accra-architectural-discovery-walking-tour-t15356/"))
+  page.css(".activity-card")
   end
+
+  def name
+     sites.css(".activity-card-title").css
+  end
+
+  def get_url
+     sites.css(".activity-card-link").css
+  end
+
+  def sites
+    parse_page.css(".activity-card")
+  end
+
 end

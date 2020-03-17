@@ -13,7 +13,7 @@ class Cli
     puts "   |     Welcome to Gh Tour!!    |".red.bold
     puts "   |||||||||||||||||||||||||||||||".red.bold
     puts ""
-    puts " Enter p for popular sites ".red
+    puts " Enter p for popular sites ".blue
 
     Scraper
     Popular_sites
@@ -37,6 +37,7 @@ class Cli
      page = Nokogiri::HTML(open("https://www.getyourguide.com/accra-l506/accra-architectural-discovery-walking-tour-t15356/"))
      puts "#{page.name}"
      puts "#{page.url}"
+     puts "WELCOME TO YOUR POPULAR SITE".blue
      puts "///////////////////////////////////////////////////////////////////////////".red
      puts ""
 
@@ -45,7 +46,7 @@ class Cli
       puts "1. Cape Coast Castle"
       puts "2. Shai Hills"
       puts "3. Boti falls"
-      puts "Enter the popular sites you want to visit or type exit".red
+      puts "Enter the popular sites you want to visit or type exit".blue
       else
         puts "No Selection entered"
       end
@@ -53,6 +54,6 @@ class Cli
   end
 
   def  goodbye
-    puts "Thank You Enjoy Your Stay In Ghana"
+    puts "Thank You Enjoy Your Stay In Ghana".blue
   end
 end

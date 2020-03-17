@@ -8,15 +8,15 @@ class Scraper
   page.css(".activity-card")
   end
 
-  def name
-     sites.css(".activity-card-title").css
-  end
+  #def name
+     #sites.css(".activity-card-title").css
+  #end
 
   def url
      sites.css(".activity-card-link").css
   end
 
-  def sites
+  def name
     parse_page.css(".activity-card")
   end
 

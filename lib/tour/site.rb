@@ -33,12 +33,12 @@ class Popular_sites
   end
 
  def self.scrape_get_your_guide
-   doc = Nokogiri::HTML(open("https://www.getyourguide.com/accra-l506/half-day-old-and-new-accra-urban-experience-walking-tour-t15359"))
+   doc = Nokogiri::HTML(open("https://www.getyourguide.com/accra-l506/accra-architectural-discovery-walking-tour-t15356"))
 
     name = doc.css("#activity-title")
     description = doc.css("#overview.content")
     availability = true
-    url = doc.css ("https://www.getyourguide.com/accra-l506/half-day-old-and-new-accra-urban-experience-walking-tour-t15359")
+    url = doc.css ("https://www.getyourguide.com/accra-l506/accra-architectural-discovery-walking-tour-t15356")
     site = self.new(name, availability,url)
   end
 

@@ -34,18 +34,22 @@ class Cli
     while input != "exit"
      input = gets.strip
       if input.to_i > 0
-     page = Nokogiri::HTML(open("https://www.getyourguide.com/accra-l506/accra-architectural-discovery-walking-tour-t15356/"))
-     puts "#{page.name}"
-     puts "#{page.url}"
+     doc = Nokogiri::HTML(open("https://www.getyourguide.com/accra-l506/accra-architectural-discovery-walking-tour-t15356/"))
+     puts "#{doc.activity-card}"
+     #puts "#{url}"
      puts "WELCOME TO YOUR POPULAR SITE".blue
      puts "///////////////////////////////////////////////////////////////////////////".red
      puts ""
 
       elsif input == "p"
       puts "Here is a list of some popular sites..."
-      puts "1. Cape Coast Castle"
-      puts "2. Shai Hills"
-      puts "3. Boti falls"
+      puts "1. Accra Architectural Discovery Walking Tour "
+      puts "2. Artistic Side of Industrious Accra: Guided Half-Day Tour"
+      puts "3. Kumasi Local Night Life by Public Taxi"
+      puts "4. Accra Markets Explorer Half-Day Tour"
+      puts "5. Half-Day Old and New Accra Urban Experience Walking Tour"
+      puts "6. Accra Markets and Ghana Food Tour"
+      puts "7. Kumasi 4-Hour Traditional Cooking Tour and Class"
       puts "Enter the popular sites you want to visit or type exit".blue
       else
         puts "No Selection entered"

@@ -1,7 +1,7 @@
 require_relative "./scraper.rb"
 require_relative "./cli.rb"
 
-class Popular_sites
+class PopularSites
   attr_accessor :name, :availability, :url
 
   @@all = []

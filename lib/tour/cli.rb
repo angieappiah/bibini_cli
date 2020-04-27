@@ -14,7 +14,9 @@ class Cli
     puts "   |||||||||||||||||||||||||||||||".red.bold
     puts ""
     puts " Enter p for popular sites ".blue
-
+    #give your user the opporunity to input
+    #when they input p, run te scraper from the Scraper class
+    
     Scraper
     Popular_sites
     options

@@ -1,7 +1,7 @@
 class Scraper
 
-def self.scrape_sites
-    doc = Nokogiri::HTML(open("https://www.getyourguide.com/accra-l506/accra-architectural-discovery-walking-tour-t15356/"))
+def self.scrape_sites(url)
+    doc = Nokogiri::HTML(open("Top Tourist Attractions in Ghana - touringghana.com"))
     doc.css (".activity-card")
 end
 

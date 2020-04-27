@@ -1,5 +1,5 @@
 #!/usr/bin/env ruby
-
+#require "pry"
 require_relative '../lib/bibini_cli'
 require "bundler/setup"
 #require "bibini_cli"
@@ -7,3 +7,8 @@ require "bundler/setup"
 Cli.new.intro
 #CLI.new.intro
 #require "environment"
+
+#doc = Nokogiri::HTML(open("https://touringghana.com/top-10-tourist-attractions/"))
+#doc.css('h3').class('a').each |element|
+  #make your instance of your site
+#end

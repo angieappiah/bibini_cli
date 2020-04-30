@@ -1,30 +1,13 @@
-class Scraper
+class SiteScraper
 
-def self.scrape_sites(url)
-    doc = Nokogiri::HTML(open("Top Tourist Attractions in Ghana - touringghana.com"))
-    doc.css (".activity-card")
-end
-
-  attr_accessor :cards, :name, :url, :description
-
-  def cards
-     doc.css(".activity-card")
-     cards.each do |cards|
-     end
-  end
-
-  def name
-    card.css(".activity-card_title")
-  end
-
-
-  def url
-    card.css(".activity-card-link").href
-  end
-
-  def description
-    doc.css("#overview.content")
-
+  def self.scrape_site
+   url = "https://touringghana.com/top-10-tourist-attractions/"
+   html_to_elements = open(url)
+   parsed_html_elements = Nokogiri::HTML(html_to_elements)
+   site_elements = parsed_html_elements.css
+   site_elements.css('h3').class('a').each do |element|
+     site_name = element.css('.site_list').text
+   end
   end
 
 end

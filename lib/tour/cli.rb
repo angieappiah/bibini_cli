@@ -17,18 +17,16 @@ class Cli
     #give your user the opporunity to input
     #when they input p, run te scraper from the Scraper class
 
-    Scraper
-    Popular
+    #Scraper
+    #Popular_sites
     options
     goodbye
   end
 
-  def Popular_sites
-    @sites = Popular_sites.scrape_sites
-  @sites.each_with_index(1) do |sites, i|
-    puts "#{i}. {sites.name} - {sites.availability}"
+  def scraper
+
   end
-  end
+
 
 
   def options

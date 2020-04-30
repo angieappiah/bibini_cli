@@ -7,7 +7,9 @@ class SiteScraper
    site_elements = parsed_html_elements.css
    #site_elements.css('h3').class('a').each do |element|
      #site_name = element.css('.site_list').text
-   #end
+     doc = Nokogiri::HTML(open("https://touringghana.com/top-10-tourist-attractions/"))
+     #doc.css('h3').class('a').each do |element|
+     #end
   end
 
     def self.scape_site_blurb(url)

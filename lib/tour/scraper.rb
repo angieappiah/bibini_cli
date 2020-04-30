@@ -1,5 +1,5 @@
 class SiteScraper
-
+element = []
   def self.scrape_site
    url = "https://touringghana.com/top-10-tourist-attractions/"
    html_to_elements = open(url)

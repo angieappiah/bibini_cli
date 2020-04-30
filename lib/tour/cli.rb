@@ -42,7 +42,7 @@ class Cli
 
       elsif input == "p"
       puts "Here is a list of some popular sites..."
-      puts "#{}"
+       SiteScraper.scrape_site
       puts "Please enter a number (for more details) or type exit".blue
       else
         puts "No Selection entered"

@@ -16,9 +16,9 @@ class Cli
     puts " Enter p for popular sites ".blue
     #give your user the opporunity to input
     #when they input p, run te scraper from the Scraper class
-    
+
     Scraper
-    Popular_sites
+    Popular
     options
     goodbye
   end

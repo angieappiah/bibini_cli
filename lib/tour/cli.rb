@@ -18,15 +18,20 @@ class Cli
     #give your user the opporunity to input
     #when they input p, run te scraper from the Scraper class
 
-    #Scraper
+    scraper_site
     #Popular_sites
     options
     goodbye
   end
 
-  #def scraper
-
-  #end
+  def scraper_site
+    print_all_sites.each.with_index(1){|site|}
+     puts "#{number}. #{site}"
+     puts "One Moment please..."
+     "#{SiteScraper.scrape_site}"
+    end
+    end
+  end
 
 
 
@@ -35,7 +40,7 @@ class Cli
     while input != "exit"
      input = gets.strip
       if input.to_i > 0
-     doc = Nokogiri::HTML(open("https://touringghana.com/top-10-tourist-attractions/"))
+     url = Nokogiri::HTML(open("https://touringghana.com/top-10-tourist-attractions/"))
 
      puts "WELCOME TO YOUR POPULAR SITE".blue
      puts "///////////////////////////////////////////////////////////////////////////".red

@@ -18,19 +18,14 @@ class Cli
     #give your user the opporunity to input
     #when they input p, run te scraper from the Scraper class
 
-    scraper_site
-    #Popular_sites
+    #scraper_site
+    popular_sites
     options
     goodbye
   end
 
-  def scraper_site
-    print_all_sites.each.with_index(1){|site|}
-     puts "#{number}. #{site}"
-     puts "One Moment please..."
-     "#{SiteScraper.scrape_site}"
-    end
-    end
+  def popular_sites
+  
   end
 
 

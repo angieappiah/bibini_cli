@@ -13,7 +13,7 @@ class Cli
     puts "   |     Welcome to Gh Tour!!    |".red.bold
     puts "   |||||||||||||||||||||||||||||||".red.bold
     puts ""
-    puts " Enter p for popular sites ".blue
+    puts " Press p for popular sites ".blue
      #Scraper.scrape_site
     #give your user the opporunity to input
     #when they input p, run te scraper from the Scraper class

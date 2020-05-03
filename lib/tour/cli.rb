@@ -14,7 +14,7 @@ class Cli
     puts "   |||||||||||||||||||||||||||||||".red.bold
     puts ""
     puts " Enter p for popular sites ".blue
-     SiteScraper.scrape_site
+     #Scraper.scrape_site
     #give your user the opporunity to input
     #when they input p, run te scraper from the Scraper class
 
@@ -25,7 +25,7 @@ class Cli
   end
 
   def popular_sites
-  
+
   end
 
 
@@ -43,7 +43,7 @@ class Cli
 
       elsif input == "p"
       puts "Here is a list of some popular sites..."
-       SiteScraper.scrape_site
+       Scraper.scrape_site
       puts "Please enter a number (for more details) or type exit".blue
       else
         puts "No Selection entered"

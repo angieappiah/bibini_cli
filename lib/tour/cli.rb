@@ -27,11 +27,6 @@ class Cli
     goodbye
   end
 
-  def Scraper.scrape_site
-
-
-  end
-
   def get_popular_places
   @places = ['Cape_Coast_Castle', 'Paga_Crocodile_Pond', 'Nzulezo_Stilt_Village', 'Lake_Volta', 'Boti_Falls']
   puts "There are 5 most popular sites in Ghana"

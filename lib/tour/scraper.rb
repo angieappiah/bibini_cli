@@ -1,10 +1,10 @@
-require 'pry'
+require_relative "./site.rb"
 class Scraper
 
   attr_reader :site_name, :location, :url
 
-  def initialize (site_name, location)
-    @site_name = site_name.capitalize
+  def initialize (name, location)
+    @name = name.capitalize
     @location = location.capitalize
     @url = "https://touringghana.com/top-10-tourist-attractions/".sub(" ", "--")
 
@@ -17,10 +17,13 @@ class Scraper
 
 
   def self.scrape_site
-   url = "https://touringghana.com/top-10-tourist-attractions/"
+   url = "https://touringghana.com/top-10-tourist-attractions/".sub(" ", "--")
    html_to_elements = open(url)
    parsed_html_elements = Nokogiri::HTML(html_to_elements)
    site_elements = parsed_html_elements.css
+   site_name = site_elements.css('h3').text
+   
+
    #site_elements.css('h3').class('a')
    #end
 

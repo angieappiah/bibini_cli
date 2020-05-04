@@ -6,7 +6,7 @@ require_relative "./site.rb"
 class Cli
 
   def intro
-    puts "Hey!".red
+    puts "Hello!".red
     puts ""
     puts "   |||||||||||||||||||||||||||||||".red.bold
     puts "   |                             |".red.bold

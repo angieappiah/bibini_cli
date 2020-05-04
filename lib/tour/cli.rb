@@ -32,7 +32,7 @@ def Scraper.scrape_site
 end
 
 def get_popular_places
-  @places = ['Cape_Coast_Castle', ]
+  @places = ['Cape_Coast_Castle', 'Paga_Crocodile_Pond', 'Nzulezo_Stilt_Village', 'Lake_Volta', 'Boti_Falls']
   puts "There are 5 most popular sites in Ghana"
 end
 
@@ -40,7 +40,6 @@ end
   def list_popular_places
      @places.each.with_index(1)do |places, index|
         puts "#{index}, #{places}"
-        puts " Press p for the list of all the popular sites ".blue
        end
   end
 
@@ -51,7 +50,7 @@ end
     while input != "exit"
      input = gets.strip
       if input.to_i > 0
-
+     puts " Press p for the list of all the popular sites ".blue
      puts "WELCOME TO YOUR POPULAR SITE".blue
      puts "///////////////////////////////////////////////////////////////////////////".red
      puts ""

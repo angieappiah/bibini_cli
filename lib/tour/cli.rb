@@ -19,18 +19,28 @@ class Cli
     #when they input p, run te scraper from the Scraper class
 
     #scraper_site
-    Scraper.scrape_site_names("https://touringghana.com/top-10-tourist-attractions/")
-    popular_sites
+    Scraper.scrape_site_names('https://touringghana.com/top-10-tourist-attractions/')
+    get_popular_places
+    list_popular_places
     options
     goodbye
   end
 
-  def popular_sites
-    @sites = ['top_tourist_attractions_in_Ghana']
-    puts "There are 8 most popular sites in Ghana"
-      puts " Press p for the list of all the popular sites ".blue
-     @sites.each.with_index(1)do |site, index|
-        puts "#{index}, {site}"
+def Scraper.scrape_site
+
+
+end
+
+def get_popular_places
+  @places = ['Cape_Coast_Castle', ]
+  puts "There are 5 most popular sites in Ghana"
+end
+
+
+  def list_popular_places
+     @places.each.with_index(1)do |places, index|
+        puts "#{index}, #{places}"
+        puts " Press p for the list of all the popular sites ".blue
        end
   end
 
@@ -47,7 +57,7 @@ class Cli
      puts ""
 
       elsif input == "p"
-      puts "Here is a list of some popular sites..."
+      puts "Here is a list of all other popular sites..."
       #Once you've made the first scrape and created the instances, you list out the instances here
       #by calling on the SIte class, iterating over eachs ite, and displaying each site's name
       puts "Please enter a number (for more details) or type exit".blue

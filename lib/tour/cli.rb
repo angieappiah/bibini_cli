@@ -13,21 +13,24 @@ class Cli
     puts "   |     Welcome to Gh Tour!!    |".red.bold
     puts "   |||||||||||||||||||||||||||||||".red.bold
     puts ""
-    puts " Press p for popular sites ".blue
+
      #Scraper.scrape_site
     #give your user the opporunity to input
     #when they input p, run te scraper from the Scraper class
 
     #scraper_site
+    Scraper.scrape_site_names("https://touringghana.com/top-10-tourist-attractions/")
     popular_sites
     options
     goodbye
   end
 
   def popular_sites
-     Site.all.each do |site_names|
-         puts "#{site_names}"
-       end
+    puts "There are 8 most popular sites in Ghana"
+      puts " Press p for the list of all the popular sites ".blue
+     #Site.all.each do |site_names|
+        #puts "#{site_names}"
+       #end
   end
 
 
@@ -37,7 +40,6 @@ class Cli
     while input != "exit"
      input = gets.strip
       if input.to_i > 0
-     url = Nokogiri::HTML(open("https://touringghana.com/top-10-tourist-attractions/"))
 
      puts "WELCOME TO YOUR POPULAR SITE".blue
      puts "///////////////////////////////////////////////////////////////////////////".red
@@ -45,7 +47,8 @@ class Cli
 
       elsif input == "p"
       puts "Here is a list of some popular sites..."
-      puts "#{Scraper.scrape_site_names}"
+      #Once you've made the first scrape and created the instances, you list out the instances here
+      #by calling on the SIte class, iterating over eachs ite, and displaying each site's name
       puts "Please enter a number (for more details) or type exit".blue
       else
         puts "No Selection entered"

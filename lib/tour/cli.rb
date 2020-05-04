@@ -26,11 +26,12 @@ class Cli
   end
 
   def popular_sites
+    @sites = ['top_tourist_attractions_in_Ghana']
     puts "There are 8 most popular sites in Ghana"
       puts " Press p for the list of all the popular sites ".blue
-     #Site.all.each do |site_names|
-        #puts "#{site_names}"
-       #end
+     @sites.each.with_index(1)do |site, index|
+        puts "#{index}, {site}"
+       end
   end
 
 

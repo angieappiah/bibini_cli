@@ -43,13 +43,19 @@ class Cli
 
       elsif input == "p"
       puts "Here is a list of some popular sites..."
-       Scraper.scrape_site
+      puts "#{Scraper.scrape_site_names}"
       puts "Please enter a number (for more details) or type exit".blue
       else
         puts "No Selection entered"
       end
     end
   end
+
+def more_details_on_sites
+  puts "Please enter a number (for more details) or type exit".blue
+puts "#{Scraper.scrape_site_blurb}"
+end
+
 
   def  goodbye
     puts "Thank You Enjoy Your Stay In Ghana".blue

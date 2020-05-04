@@ -22,35 +22,40 @@ class Cli
     Scraper.scrape_site_names('https://touringghana.com/top-10-tourist-attractions/')
     get_popular_places
     list_popular_places
+    more_info
     options
     goodbye
   end
 
-def Scraper.scrape_site
+  def Scraper.scrape_site
 
 
-end
+  end
 
-def get_popular_places
+  def get_popular_places
   @places = ['Cape_Coast_Castle', 'Paga_Crocodile_Pond', 'Nzulezo_Stilt_Village', 'Lake_Volta', 'Boti_Falls']
   puts "There are 5 most popular sites in Ghana"
-end
-
-
-  def list_popular_places
-     @places.each.with_index(1)do |places, index|
-        puts "#{index}, #{places}"
-       end
   end
 
 
+  def list_popular_places
+  @places.each.with_index(1)do |places, index|
+  puts "#{index}, #{places}"
+  end
+  end
+
+  def more_info
+    puts "For more info press any number"
+    puts "Not interested?".red
+    puts " Press p for the list of all the popular sites ".blue
+
+  end
 
   def options
     input = nil
     while input != "exit"
      input = gets.strip
       if input.to_i > 0
-     puts " Press p for the list of all the popular sites ".blue
      puts "WELCOME TO YOUR POPULAR SITE".blue
      puts "///////////////////////////////////////////////////////////////////////////".red
      puts ""
@@ -65,12 +70,6 @@ end
       end
     end
   end
-
-def more_details_on_sites
-  puts "Please enter a number (for more details) or type exit".blue
-puts "#{Scraper.scrape_site_blurb}"
-end
-
 
   def  goodbye
     puts "Thank You Enjoy Your Stay In Ghana".blue

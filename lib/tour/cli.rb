@@ -25,7 +25,9 @@ class Cli
   end
 
   def popular_sites
-
+     Site.all.each do |site_names|
+         puts "#{site_names}"
+       end
   end
 
 

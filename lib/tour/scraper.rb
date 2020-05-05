@@ -5,6 +5,7 @@ class Scraper
 
 
   def self.scrape_site(url)
+    puts "I'm running!"
    html_to_elements = open(url)
    parsed_html_elements = Nokogiri::HTML(html_to_elements)
    parsed_html_elements.css('h3').each do |elements|

@@ -23,12 +23,14 @@ class Cli
     get_popular_sites
     list_popular_sites
     more_info
+    #site
     options
     goodbye
   end
 
   def get_popular_sites
-  @sites = ['Cape_Coast_Castle', 'Paga_Crocodile_Pond', 'Nzulezo_Stilt_Village', 'Lake_Volta', 'Boti_Falls']
+    # we cannot hard code, we need to iterate over the instances of sites we made in the scraper
+    # and display them here
   puts "There are 5 most popular sites in Ghana"
   end
 

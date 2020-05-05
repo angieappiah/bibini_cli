@@ -43,7 +43,7 @@ class Cli
     puts "For more info press any number"
     puts "Not interested?".red
     puts " Press p for the list of all the popular sites ".blue
-    #site_name
+    Scraper
   end
 
   def options

@@ -46,6 +46,11 @@ class Cli
     Scraper
   end
 
+  def site
+  Scraper.scrape_site
+    puts "#{site_name}"
+  end
+
   def options
     input = nil
     while input != "exit"

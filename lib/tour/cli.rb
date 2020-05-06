@@ -23,7 +23,7 @@ class Cli
     Scraper.scrape_site('https://touringghana.com/top-10-tourist-attractions/')
     get_popular_sites
     more_info
-    #site
+    description
     options
     goodbye
   end
@@ -40,9 +40,8 @@ class Cli
     Scraper
   end
 
-  def site
-  Scraper.scrape_site
-    puts "#{site_name}"
+  def description
+  #Scraper.scrape_description
   end
 
   def options
@@ -53,6 +52,7 @@ class Cli
      puts "WELCOME TO YOUR POPULAR SITE".blue
      puts "///////////////////////////////////////////////////////////////////////////".red
      puts ""
+     puts "#{description}"
 
       #elsif input == "p"
       #puts "Here is a list of all other popular sites..."

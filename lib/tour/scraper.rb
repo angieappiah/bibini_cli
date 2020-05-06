@@ -12,7 +12,9 @@ class Scraper
    site_name = elements.children.text
    url = elements.css('a').attr('href').text
    description = elements.css('a').attr('href').value
-   Site.new(site_name,description,url)
+   description = Site.new(site_name,description,url)
+   new_description = Site.new(site_name,description,url)
+
    puts "#{index}, #{site_name}"
    puts "#{url}".yellow
    puts ""
@@ -22,16 +24,16 @@ class Scraper
    end
   end
 
-  def self.scrape_description(url)
-   html_to_elements = open("https://touringghana.com/lake-bosomtwi/")
-   parsed_html_elements = Nokogiri::HTML(html_to_elements)
-   parsed_html_elements.css('h1').each do |elements|
-   description = elements.css('a').attr('href').value
+  #def self.scrape_description(url)
+   #html_to_elements = open("https://touringghana.com/lake-bosomtwi/")
+   #parsed_html_elements = Nokogiri::HTML(html_to_elements)
+   #parsed_html_elements.css('h1').each do |elements|
+   #description = elements.css('a').attr('href').value
    #details_of_place = elements.css('.td-post-content').attr('href')
-  url = elements.css('a').attr('href').text
-   Site.new(site_name,location,url)
-   puts "#{description}"
-   end
-  end
+  #url = elements.css('a').attr('href').text
+   #Site.new(site_name,location,url)
+   #puts "#{description}"
+   #end
+  #end
 
 end

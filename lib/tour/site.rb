@@ -18,14 +18,8 @@ class Site
    @@all
  end
 
- def self.print_all_site
+ def self.print_all_sites
    Site.all.each do |site|
-     puts site.name
-   end
- end
-
- def self.print_all_blurb
-   Site.all.each do |blurb|
      puts site.name
    end
  end

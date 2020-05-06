@@ -5,7 +5,6 @@ class Scraper
 
 
   def self.scrape_site(url)
-    puts "I'm running!"
    html_to_elements = open(url)
    parsed_html_elements = Nokogiri::HTML(html_to_elements)
    parsed_html_elements.css('h3').each do |elements|
@@ -14,6 +13,7 @@ class Scraper
    location = elements.css('a').attr('href')
    url = elements.css('a').attr('href').value
    Site.new(site_name,location,url)
+   puts "#{site_name}"
    #use the information that you scraped to make new instances of the sites
    #Site.new(name, description_url)
    #The description will be the second scrape

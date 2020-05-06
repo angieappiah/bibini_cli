@@ -21,7 +21,6 @@ class Cli
     #scraper_site
     Scraper.scrape_site('https://touringghana.com/top-10-tourist-attractions/')
     get_popular_sites
-    list_popular_sites
     more_info
     #site
     options
@@ -31,14 +30,7 @@ class Cli
   def get_popular_sites
     # we cannot hard code, we need to iterate over the instances of sites we made in the scraper
     # and display them here
-  puts "There are 5 most popular sites in Ghana"
-  end
-
-
-  def list_popular_sites
-  @sites.each.with_index(1)do |sites, index|
-  puts "#{index}, #{sites}"
-  end
+  puts "There are 10 most popular sites in Ghana"
   end
 
   def more_info

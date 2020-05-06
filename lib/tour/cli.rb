@@ -20,15 +20,15 @@ class Cli
     #when they input p, run te scraper from the Scraper class
 
     #scraper_site
-    Scraper.scrape_site('https://touringghana.com/top-10-tourist-attractions/')
-    get_popular_sites
+    Scraper.scrape_sites('https://touringghana.com/top-10-tourist-attractions/')
+    descriptions
     more_info
     description
     options
     goodbye
   end
 
-  def get_popular_sites
+  def descriptions
     # we cannot hard code, we need to iterate over the instances of sites we made in the scraper
     # and display them here
   end

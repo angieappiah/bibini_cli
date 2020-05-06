@@ -11,7 +11,7 @@ class Scraper
    #this is an array of site elements, we need to iterate over it and make new Site instances
    site_name = elements.children.text
    url = elements.css('a').attr('href').text
-   description = elements.css('.td-post-content').attr('href')
+   description = elements.css('.post-content').text
    Site.new(site_name,description,url)
    puts "#{index}, #{site_name}"
    puts "#{url}".yellow
@@ -27,7 +27,7 @@ class Scraper
    parsed_html_elements = Nokogiri::HTML(html_to_elements)
    parsed_html_elements.css('h1').each do |elements|
    site_name = elements.children.text
-   description = elements.css('.td-post-content').attr('href')
+   description = elements.css('.post-content').text
    url = elements.css('a').attr('href').text
    #description = Scraper.new(description)
    end

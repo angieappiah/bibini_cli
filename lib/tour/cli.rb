@@ -36,7 +36,7 @@ class Cli
   def more_info
     puts "FOR MORE INFO PRESS ANY NUMBER".red
     puts "Not interested? type exit".red
-    puts " Press p for the list of all the popular sites ".blue
+    #puts " Press p for the list of all the popular sites ".blue
     Scraper
   end
 
@@ -54,11 +54,11 @@ class Cli
      puts "///////////////////////////////////////////////////////////////////////////".red
      puts ""
 
-      elsif input == "p"
-      puts "Here is a list of all other popular sites..."
+      #elsif input == "p"
+      #puts "Here is a list of all other popular sites..."
       #Once you've made the first scrape and created the instances, you list out the instances here
       #by calling on the SIte class, iterating over each site, and displaying each site's name
-      puts "Please enter a number (for more details) or type exit".blue
+      puts "Please enter a different number (for more details) or type exit".blue
       else
         puts "No Selection entered"
       end

@@ -11,13 +11,15 @@ class Scraper
    #this is an array of site elements, we need to iterate over it and make new Site instances
    site_name = elements.children.text
    url = elements.css('a').attr('href').text
-   description = elements.css('a').attr('href').value
+   description = elements.css('a').attr('.td-post-sharing-top')
    description = Site.new(site_name,description,url)
    new_description = Site.new(site_name,description,url)
 
    puts "#{index}, #{site_name}"
    puts "#{url}".yellow
+   puts "#{description}"
    puts ""
+
    #use the information that you scraped to make new instances of the sites
    #Site.new(name, description_url)
    #The description will be the second scrape

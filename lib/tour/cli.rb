@@ -13,6 +13,7 @@ class Cli
     puts "   |     Welcome to Gh Tour!!    |".red.bold
     puts "   |||||||||||||||||||||||||||||||".red.bold
     puts ""
+    puts "These are the most popular sites in Ghana ...........".blue
 
      #Scraper.scrape_site
     #give your user the opporunity to input
@@ -30,12 +31,11 @@ class Cli
   def get_popular_sites
     # we cannot hard code, we need to iterate over the instances of sites we made in the scraper
     # and display them here
-  puts "There are 10 most popular sites in Ghana"
   end
 
   def more_info
-    puts "For more info press any number"
-    puts "Not interested?".red
+    puts "FOR MORE INFO PRESS ANY NUMBER".red
+    puts "Not interested? type exit".red
     puts " Press p for the list of all the popular sites ".blue
     Scraper
   end

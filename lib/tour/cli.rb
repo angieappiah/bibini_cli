@@ -21,16 +21,22 @@ class Cli
 
     #scraper_site
     Scraper.scrape_site('https://touringghana.com/top-10-tourist-attractions/')
-    get_popular_sites
-    more_info
+    Scraper.scrape_print_all_site
+    #get_popular_sites
     #site
+    print_all_site
+    more_info
     options
     goodbye
   end
 
-  def get_popular_sites
+  def print_all_site
+  Scraper.scrape_print_all_site
+    if input.to_i > 0
+      puts "#{description}"
     # we cannot hard code, we need to iterate over the instances of sites we made in the scraper
     # and display them here
+  end
   end
 
   def more_info
@@ -53,7 +59,7 @@ class Cli
      puts "WELCOME TO YOUR POPULAR SITE".blue
      puts "///////////////////////////////////////////////////////////////////////////".red
      puts ""
-
+     puts "#{description}"
       #elsif input == "p"
       #puts "Here is a list of all other popular sites..."
       #Once you've made the first scrape and created the instances, you list out the instances here

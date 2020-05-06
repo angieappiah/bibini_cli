@@ -11,10 +11,11 @@ class Scraper
    #this is an array of site elements, we need to iterate over it and make new Site instances
    site_name = elements.children.text
    url = elements.css('a').attr('href').text
-   description = elements.css('a').attr('href').value
+   description = elements.css('.td-post-content').attr('href')
    Site.new(site_name,description,url)
    puts "#{index}, #{site_name}"
    puts "#{url}".yellow
+   puts "#{description}"
    puts ""
    #use the information that you scraped to make new instances of the sites
    #Site.new(name, description_url)
@@ -22,15 +23,27 @@ class Scraper
    end
   end
 
-  def self.scrape_description(url)
-   html_to_elements = open("https://touringghana.com/lake-bosomtwi/")
+  def self.scrape_blurb(url)
+   html_to_elements = open(url)
    parsed_html_elements = Nokogiri::HTML(html_to_elements)
-   parsed_html_elements.css('h1').each do |elements|
-   description = elements.css('a').attr('href').value
+   parsed_html_elements.css('h3').each do |elements|
+   description = elements.css('.td-post-content').attr('href')
+   #details_of_place = elements.css('.td-post-content').attr('href')
+   url = elements.css('a').attr('href').text
+   Blurb.new(site_name,description,url)
+   puts "#{description}"
+   end
+  end
+
+  def self.scrape_print_all_blurb(url)
+  html_to_elements = open(url)
+   parsed_html_elements = Nokogiri::HTML(html_to_elements)
+   parsed_html_elements.css('h3').each do |elements|
+   description = elements.css('.td-post-content').attr('href')
    #details_of_place = elements.css('.td-post-content').attr('href')
   url = elements.css('a').attr('href').text
-   Site.new(site_name,location,url)
-   puts "#{description}"
+   PrintAllBlurb.new(site_name,description,url)
+   puts "#{url}".yellow
    end
   end
 

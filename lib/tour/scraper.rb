@@ -15,7 +15,6 @@ class Scraper
    Site.new(site_name,description,url)
    puts "#{index}, #{site_name}"
    puts "#{url}".yellow
-   puts "#{description}"
    puts ""
    #use the information that you scraped to make new instances of the sites
    #Site.new(name, description_url)
@@ -23,14 +22,14 @@ class Scraper
    end
   end
 
-  def self.scrape_descriptions(url)
-   html_to_elements = open(url)
+  def self.scrape_descriptions
+   html_to_elements = (open("https://touringghana.com/top-10-tourist-attractions/"))
    parsed_html_elements = Nokogiri::HTML(html_to_elements)
    parsed_html_elements.css('h1').each do |elements|
    site_name = elements.children.text
    description = elements.css('.td-post-content').attr('href')
    url = elements.css('a').attr('href').text
-   Site.new(site_name,location,url)
+   #description = Scraper.new(description)
    end
    end
 

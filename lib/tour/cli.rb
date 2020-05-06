@@ -23,12 +23,13 @@ class Cli
     Scraper.scrape_sites('https://touringghana.com/top-10-tourist-attractions/')
     descriptions
     more_info
-    description
+    descriptions
     options
     goodbye
   end
 
   def descriptions
+    Scraper.scrape_descriptions
     # we cannot hard code, we need to iterate over the instances of sites we made in the scraper
     # and display them here
   end
@@ -40,9 +41,6 @@ class Cli
     Scraper
   end
 
-  def description
-  #Scraper.scrape_description
-  end
 
   def options
     input = nil
@@ -52,7 +50,7 @@ class Cli
      puts "WELCOME TO YOUR POPULAR SITE".blue
      puts "///////////////////////////////////////////////////////////////////////////".red
      puts ""
-     puts "#{description}"
+     puts "#{descriptions}"
 
       #elsif input == "p"
       #puts "Here is a list of all other popular sites..."

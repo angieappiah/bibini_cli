@@ -49,8 +49,7 @@ class Cli
       if input.to_i > 0
      puts "WELCOME TO YOUR POPULAR SITE".blue
      puts "///////////////////////////////////////////////////////////////////////////".red
-     puts ""
-     puts "#{descriptions}"
+     puts description
 
       #elsif input == "p"
       #puts "Here is a list of all other popular sites..."

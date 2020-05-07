@@ -27,7 +27,7 @@ class Scraper
    parsed_html_elements = Nokogiri::HTML(html_to_elements)
    parsed_html_elements.css('h1').each do |elements|
    site_name = elements.children.text
-   description = elements.css('.post-content').text
+   description = elements.css('p').attr('href')
    url = elements.css('a').attr('href').text
    #description = Scraper.new(description)
    end

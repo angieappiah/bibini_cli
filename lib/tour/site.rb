@@ -5,7 +5,7 @@ class Site
 
   @@all = []
 
-  attr_accessor :site_name, :description, :url
+  attr_accessor :site_name, :description, :url,
 
  def initialize (site_name, description, url)
    @site_name = site_name
@@ -19,10 +19,13 @@ class Site
  end
 
  def self.print_all_sites
-   Site.all.each do |site|
-     puts site.name
+   Site.all.each_with_index do |site,index|
+     puts site.site_name
+     puts site.description
+     puts site.url
    end
  end
+
 
  def self.find_by_index(index)
    @@all[index]

@@ -20,7 +20,7 @@ class Cli
     #when they input p, run te scraper from the Scraper class
 
     #scraper_site
-    Scraper.scrape_sites('https://touringghana.com/top-10-tourist-attractions/')
+  TourSiteScraper.scrape_sites
     #Site.print_all_sites
     details
     more_info
@@ -29,6 +29,7 @@ class Cli
   end
 
   def details
+
     #puts description
     # we cannot hard code, we need to iterate over the instances of sites we made in the scraper
     # and display them here
@@ -37,7 +38,7 @@ class Cli
   def more_info
     puts "FOR MORE INFO PRESS ANY NUMBER".red
     puts "Not interested? type exit".red
-    Scraper
+    TourSiteScraper.scrape_sites
   end
 
 
@@ -48,7 +49,7 @@ class Cli
       if input.to_i > 0
      puts "WELCOME TO YOUR POPULAR SITE".blue
      puts "///////////////////////////////////////////////////////////////////////////".red
-    
+
 
       #elsif input == "p"
       #puts "Here is a list of all other popular sites..."

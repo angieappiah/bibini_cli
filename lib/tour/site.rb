@@ -5,22 +5,22 @@ class Site
 
   @@all = []
 
-  attr_accessor :site_name, :description, :url,
+  attr_accessor :name, :description, :url
 
- def initialize (site_name, description, url)
-   @site_name = site_name
-   @description = description
-   @url = url
-   @@all << self
- end
+def initialize(name, description, url)
+  @name = name
+  @description = description
+  @url = url
+  @@all << self
+end
 
  def self.all
    @@all
  end
 
  def self.print_all_sites
-   Site.all.each_with_index do |site,index|
-     puts site.site_name
+   Site.all.each do |site|
+     puts site.name
      puts site.description
      puts site.url
    end

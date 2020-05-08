@@ -22,17 +22,20 @@ class Cli
     #scraper_site
   TourSiteScraper.scrape_sites
     #Site.print_all_sites
-    details
+    sites
     more_info
     options
     goodbye
   end
 
-  def details
-
-    #puts description
+  def sites
+  TourSiteScraper.scrape_sites.each.with_index(1) do |name, index, url, description|
+    puts "#{index}, #{name}"
+    puts "#{url}".yellow
+    puts description
     # we cannot hard code, we need to iterate over the instances of sites we made in the scraper
     # and display them here
+    end
   end
 
   def more_info

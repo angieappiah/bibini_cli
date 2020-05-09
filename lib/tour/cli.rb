@@ -64,8 +64,6 @@ class Cli
      #Once you've made the first scrape and created the instances, you list out the instances here
      #by calling on the SIte class, iterating over each site, and displaying each site's name
      puts "Please enter a different number (for more details) or type exit".blue
-     puts "FOR MORE INFO PRESS ANY NUMBER".red
-     puts "Not interested? type exit".red
   end
 
 

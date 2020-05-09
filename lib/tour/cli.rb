@@ -2,6 +2,7 @@
 require 'colorize'
 require_relative "./scraper.rb"
 require_relative "./site.rb"
+require 'pry'
 
 class Cli
 
@@ -29,10 +30,10 @@ class Cli
   end
 
   def sites
-  TourSiteScraper.scrape_sites
-  site.each_with_index (1) do |name, index|
-    puts "#{index}, #{site.name}"
-    puts "#{site.url}".yellow
+    TourSiteScraper.scrape_sites.each.with_index(1) do |elements, index|
+    puts "#{index}: #{name}"
+    #puts "#{elements.url}".yellow
+    #binding.pry
     #puts description
     # we cannot hard code, we need to iterate over the instances of sites we made in the scraper
     # and display them here
@@ -47,16 +48,14 @@ class Cli
 
 
   def options
+    TourSiteScraper.scrape_sites
     input = nil
     while input != "exit"
      input = gets.strip
       if input.to_i > 0
      puts "WELCOME TO YOUR POPULAR SITE".blue
      puts "///////////////////////////////////////////////////////////////////////////".red
-
-
       #elsif input == "p"
-      #puts "Here is a list of all other popular sites..."
       #puts " Press p for the list of all the popular sites ".blue
       #Once you've made the first scrape and created the instances, you list out the instances here
       #by calling on the SIte class, iterating over each site, and displaying each site's name

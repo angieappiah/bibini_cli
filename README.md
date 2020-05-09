@@ -18,8 +18,9 @@ $ ./bin/bibini_cli
 
 
  THE USAGE  INSTRUCTIONS
+ Popular sites are displayed in the command line
+ Input any number that corresponds with your choice
 
-Type bibini_cli in the command line
 
  DEVELOPMENT
 

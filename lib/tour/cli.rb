@@ -21,9 +21,8 @@ class Cli
     #give your user the opporunity to input
     #when they input p, run te scraper from the Scraper class
 
-    #scraper_site
+    
   TourSiteScraper.scrape_sites
-    #Site.print_all_sites
     list_sites
     options
     goodbye

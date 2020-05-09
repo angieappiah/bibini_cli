@@ -24,19 +24,36 @@ class Cli
   TourSiteScraper.scrape_sites
     #Site.print_all_sites
     sites
+    get_description
     more_info
     options
     goodbye
   end
 
   def sites
-    TourSiteScraper.scrape_sites.each.with_index(1) do |elements, index|
-    puts "#{index}: #{name}"
+    TourSiteScraper.scrape_sites.each.with_index(1) do |sites, index|
+    puts index
+    puts sites.name
+    puts sites.description
     #puts "#{elements.url}".yellow
     #binding.pry
     #puts description
     # we cannot hard code, we need to iterate over the instances of sites we made in the scraper
     # and display them here
+  end
+  end
+
+  def get_description
+  TourSiteScraper.scrape_sites
+  puts "Please enter a number (for details) or type exit".blue
+  input = nil
+  while input != "exit"
+   input = gets.strip
+    if input.to_i > 0
+      puts sites.description
+    else
+    puts "No Selection entered"
+  end
   end
   end
 

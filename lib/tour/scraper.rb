@@ -14,9 +14,10 @@ class TourSiteScraper
    url = elements.css('a').attr('href').text
    description = elements.children.text
    new_site = Site.new(name, description, url)
-   #puts "#{index}, #{name}"
-   #puts "#{url}".yellow
-   #puts "#{description}"
+   puts "#{index}, #{name}"
+   puts ""
+   puts "#{url}".yellow
+   #puts description
    #use the information that you scraped to make new instances of the sites
    end
   end

@@ -4,7 +4,7 @@ class TourSiteScraper
 
 
 
-  def self.scrape_site
+  def self.scrape_sites
    url = "https://touringghana.com/top-10-tourist-attractions/"
    html_to_elements = open(url)
    parsed_html_elements = Nokogiri::HTML(html_to_elements)

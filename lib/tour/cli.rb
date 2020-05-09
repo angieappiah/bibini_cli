@@ -22,30 +22,31 @@ class Cli
     #when they input p, run te scraper from the Scraper class
 
     #scraper_site
-  TourSiteScraper.scrape_site
+  TourSiteScraper.scrape_sites
     #Site.print_all_sites
-    get_site
+    get_sites
+    list_sites
     options
     get_description
     more_info
     goodbye
   end
 
-  def get_site
-    TourSiteScraper.scrape_site
-    #puts "#{index}"
-    #puts "#{name}"
-    #puts "#{description}"
-    #puts "#{elements.url}".yellow
-    #binding.pry
-    #puts description
+  def get_sites
+    TourSiteScraper.scrape_sites
     # we cannot hard code, we need to iterate over the instances of sites we made in the scraper
     # and display them here
-  #end
+  end
+
+  def list_sites
+    get_sites
+    TourSiteScraper.scrape_sites.each_with_index do |site, index|
+      puts "#{index}. #{site.name}"
+    end
   end
 
   def options
-    TourSiteScraper.scrape_site
+    TourSiteScraper.scrape_sites
     input = nil
     while input != "exit"
      input = gets.strip
@@ -80,7 +81,7 @@ class Cli
   def more_info
     puts "FOR MORE INFO PRESS ANY NUMBER".red
     puts "Not interested? type exit".red
-    TourSiteScraper.scrape_site
+    TourSiteScraper.scrape_sites
   end
 
 

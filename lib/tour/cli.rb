@@ -24,28 +24,17 @@ class Cli
     #scraper_site
   TourSiteScraper.scrape_sites
     #Site.print_all_sites
+    options
     get_sites
     list_sites
-    options
     get_description
     more_info
     goodbye
   end
 
-  def get_sites
-    TourSiteScraper.scrape_sites
-    # we cannot hard code, we need to iterate over the instances of sites we made in the scraper
-    # and display them here
-  end
-
-  def list_sites
-    get_sites
-    TourSiteScraper.scrape_sites.each_with_index do |site, index|
-      puts "#{index}. #{site.name}"
-    end
-  end
 
   def options
+    puts "Please enter a number (for details) or type exit".blue
     TourSiteScraper.scrape_sites
     input = nil
     while input != "exit"
@@ -64,16 +53,29 @@ class Cli
     end
   end
 
+
+    def get_sites
+      TourSiteScraper.scrape_sites
+      # we cannot hard code, we need to iterate over the instances of sites we made in the scraper
+      # and display them here
+    end
+
+    def list_sites
+      get_sites
+      TourSiteScraper.scrape_sites.each_with_index do |site, index|
+        puts "#{index}. #{site.name}"
+      end
+    end
+
   def get_description
   puts "Please enter a number (for details) or type exit".blue
   input = nil
   while input != "exit"
    input = gets.strip
     if input.to_i > 0
-      puts TourSiteScraper.scrape_site.each do text
     #else
     # "No Selection entered"
-  end
+  #end
   end
   end
   end
@@ -81,7 +83,7 @@ class Cli
   def more_info
     puts "FOR MORE INFO PRESS ANY NUMBER".red
     puts "Not interested? type exit".red
-    TourSiteScraper.scrape_sites
+
   end
 
 

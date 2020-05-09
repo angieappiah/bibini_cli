@@ -44,15 +44,15 @@ class Cli
   end
 
   def get_description
-  TourSiteScraper.scrape_sites
   puts "Please enter a number (for details) or type exit".blue
   input = nil
   while input != "exit"
    input = gets.strip
     if input.to_i > 0
-      puts sites.description
-    else
-    puts "No Selection entered"
+      puts TourSiteScraper.scrape_sites.each do text
+    #else
+    # "No Selection entered"
+  end
   end
   end
   end

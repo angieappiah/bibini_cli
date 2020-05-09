@@ -21,7 +21,7 @@ class Cli
     #give your user the opporunity to input
     #when they input p, run te scraper from the Scraper class
 
-    
+
   TourSiteScraper.scrape_sites
     list_sites
     options
@@ -50,6 +50,8 @@ class Cli
       Site.all.each_with_index do |site, index|
         #binding.pry
         puts "#{index}. #{site.name}"
+        puts "#{site.url}".red
+        puts ""
       end
     end
 

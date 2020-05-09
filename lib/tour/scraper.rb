@@ -19,9 +19,9 @@ class TourSiteScraper
    new_site = Site.new(name, description, url)
 
    #binding.pry
-   puts "#{index}, #{name}"
-   puts "#{url}".yellow
-   puts "#{description}"
+   #puts "#{index}, #{name}"
+   #puts "#{url}".yellow
+   #puts "#{description}"
    #use the information that you scraped to make new instances of the sites
    #Site.new(name, description_url)
    #The description will be the second scrape

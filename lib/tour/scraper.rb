@@ -12,7 +12,7 @@ class TourSiteScraper
    #this is an array of site elements, we need to iterate over it and make new Site instances
    name = elements.children[1].text
    url = elements.css('a').attr('href').text
-   description = elements.children.text
+   description = elements.children.text.strip.gsub(/\s+/,'')
    new_site = Site.new(name, description, url)
    #binding.pry
    #puts "#{index}. #{name}"

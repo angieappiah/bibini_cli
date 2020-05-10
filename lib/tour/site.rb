@@ -20,9 +20,6 @@ end
 
  def self.print_all_sites
    Site.all.each do |site|
-     puts site.name
-     puts site.description
-     puts site.url
    end
  end
 

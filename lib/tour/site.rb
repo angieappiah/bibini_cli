@@ -5,7 +5,7 @@ class Site
 
   @@all = []
 
-  attr_accessor :name, :description, :url , :site
+  attr_accessor :name, :description, :url
 
 def initialize(name, description, url)
   @name = name

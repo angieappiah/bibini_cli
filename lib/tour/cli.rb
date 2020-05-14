@@ -43,7 +43,8 @@ class Cli
 
     def list_sites
      Site.all.each_with_index do |site, index|
-     puts "#{index}. #{site.name}"
+     indexplusone = index + 1
+     puts "#{indexplusone}. #{site.name}"
      puts "#{site.url}".red
      puts ""
     end

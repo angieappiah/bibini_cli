@@ -18,11 +18,6 @@ end
    @@all
  end
 
- def self.print_all_sites
-   Site.all.each do |site|
-   end
- end
-
 
  def self.find_by_index(index)
    @@all[index]
